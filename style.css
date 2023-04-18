@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Century Gothic;
+}
+.card{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; 
+    max-width: 500px;
+    box-shadow: 10px 15px 15px #0000002d;
+    border-radius: 10px;
+    display: flex;
+}
+.card .left, .card .right{
+    width: 100%;
+    padding: 25px;
+    border-radius: inherit;
+}
+.card .left{
+    background: #6541fe;
+    color: #dbd1ff;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card .left .result{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-bottom: 25px;
+}
+.card .left .result .score{
+    border-radius: 50%;
+    height: 120px;
+    aspect-ratio: 1;
+    background: linear-gradient(#0000006b, #00000009, #00000006);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card .left .result .score .mark{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+}
+.card .left .observation h4{
+    color: #fff;
+}
+.card .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+}
+.card .right summary{
+    font-weight: 600;
+}
+.card .right .summary{
+    background: var(--bg);
+    color: var(--clr);
+    border-radius: 7px;
+    font-size: 0.9em;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+.card .right .point{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.card .right .point span{
+    color: #000;
+}
+.card .right button {
+    border: none;
+    outline: transparent;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 30px;
+    background: #303a5b;
+    font-weight: 600;
+    color: #fff;
+}
+.card .right button:active, .card .right button:hover {
+    outline: 3px solid #303a5b66;
+}
+@media (max-width:520px) {
+    .card{
+        flex-direction: column;
+        width: 90%;
+        margin: 30px 0;
+    }
+}
+@media (max-width:300px) {
+    .card{
+        width: 95%;
+        min-width: 275px;
+    }
+}
